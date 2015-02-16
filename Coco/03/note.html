@@ -1,0 +1,151 @@
+note - CSS 查缺补漏
+NanoDegree
+Homework:
+https://www.udacity.com/course/nd001
+6 projects
+one week free trial only!
+https://github.com/hanweifish
+
+
+Slope style
+selectors 
+Cascade Order
+Floating Left & Right
+
+
+Adding CSS (Cascade order, style priority, the first one is highest)
+(0) Using !important
+(1) Inline
+(2) In the head
+(3) External <link>
+
+Selector (the same as JQuery, the only difference is JQuery has $Doc., so JQuery > CSS)
+
+(1) Elemente selector - use tag to selector
+H1
+(2) id, class selector
+(3) Compound selectors - combine:
+<h1 class = "intro" id="header"> nice and toasty</h1>
+h1#header
+h1.intro#header
+
+
+Cascade Order
+(1) Using !important > Inline > In the head > External <link>
+(2)
+If the selector is the same, the the second overrides the first
+(3) id>class>tag (element)
+p {color: #fff;} 混用都可以
+.intro {color: #98c7d4} 用于css
+#header {color: #4444234} 用于javascript, jQuery
+
+
+Float left & right & none (like Gravity in reality)
+(1) Be careful, if you write 'float right' first, and 'float left' later,
+it will be error, they will show the same line.
+
+(2) float & clear pair is USEFUL!
+clear: left/right/both
+img{
+	float: left;
+}
+.intro{
+	clear: both
+}
+when you have an image and text (and text is too few or too many), you can use clear: both
+-----------------------------------------------------------------------
+Inheritance & Specificity
+
+.featured p {}	所有层的p都管用，哪怕是div的p，也管用
+.featured > p {}	第一层的p管用
+
+
+piority
+inline > id >class > element
+0, 0, 0, 0
+#content p {	//0.1.0.1
+	color: 000
+}
+#content .featured{ //0.1.1.0
+	color: 777
+}
+------------------------------------------------------------------------
+Box bindings 
+1. box model
+content area < padding < border < margin
+Overflow property (4种)
+visible, auto, hidden, scroll
+2. Positioning (top or bottom, left or right)4种
+top>bottom
+left>right
+(1) Static
+(2) relative
+-0.5em (相对于base 字体size)
+(3) absolute
+原始为页面左上角，但是，如果上级有个relative，就以这个为准。
+(4) Fixed
+navi bar的定位是fixed
+
+
+3. Z-Index 必须配合position使用。
+同一个level，产生overlap的情况。
+default是0，那么1就比0大，就会叠加上去！
+z-index: 1
+数字越大，priority越高。
+
+z-index: -1 (-2, -3, -10 are all euqal to -1)
+放在最底层（背景图）
+
+------------------------------------------------------------------------
+Grooming Your code
+Staying DRY
+Display Types
+Centering
+
+1. 防止code冗余
+同样的东西，尽量写成高一点的层，比如body， .containner之类的
+
+selector combination:
+p, .ski_lift, h6{
+	font-size: 12px
+}
+
+margin: 15px 10px 0 20px;
+注意是0的时候，不要加单位
+上右下左
+
+comment方式和java一样
+
+2. Display: none/block/inline/inline-block
+block是reserve整个一横行，占满一行。
+inline是把所有的inline元素放同一行里面的
+
+3. Centering
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
