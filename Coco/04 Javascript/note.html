@@ -1,0 +1,92 @@
+Javascript (js1.pdf, js2.pdf)
+javascript最大的特性：
+（1）变量可以是任何东西：函数，return 函数
+（2）alert也可以用于调试中断
+（3）JQuery Callback function
+JQuery相当于Javascript的一个库，主要的功能都在JQuery里面
+
+
+函数套函数
+
+code closure
+在index.html里面的console测试那个script.js的function：
+testClosure
+testClosure()
+testClosure()()
+
+
+JQuery之前如何connect html & js？
+onclick
+
+
+
+
+
+-----------------------JQuery------------------------------------
+JQuery优势，web里面只要看见$,就肯定是JQuery
+make it easy to: （前4点）
+find
+change
+listen: to what a user does and react accordingly
+talk
+animate: 现在用css比较多
+
+
+Javascript和css的selector都是差不多的，唯一区别：
+select document- DOM
+
+语法Syntax
+$(selector).action()
+其中selector和css里面的selector一样；
+其中action()有两种：
+（1）状态类的，比如ready
+（2）行为性的，比如hide
+
+
+-----------------------Ajax------------------------------------
+发出去的，收回来的
+network- headers就能看见
+例如：paypal里面send money
+可以发现：
+network里面没有html文件，所以没有refresh page，所以是lightweight
+看见preview里面就是比较容易看。
+
+重点Basics：
+1. ajax用jquery实现，很方便
+2. 语法Syntax
+$.ajax()
+
+<div class = "ticket" data-conNum = 1234>;
+errorMessage: 是说成功传出去了，才会出现；如果404，那么久没有message
+
+3. ajax的参数
+error
+
+4. Using Event Delegation
+用on,比如
+$('.confirmation').on('click', 'button', function(){});
+
+css的class要带.
+
+
+
+作业：
+回去必须看w3school里面的JS Tutorial；如果不看，以后的课会听不懂。
+use strict
+regular expression: validate email
+课件
+https://github.com/techbow/web3/tree/course
+
+take screenshot of Jquery, js quiz, and upload:
+example
+
+
+
+
+
+
+
+
+
+
+
